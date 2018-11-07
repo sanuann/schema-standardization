@@ -8,11 +8,11 @@
     "schema:description": "FDE describing the NDA-PHQ-9",
     "schema:schemaVersion": "0.0.1",
     "nda-common": {
-        "@id": "https://raw.githubusercontent.com/Repronim/schema-standardization/master/activities/NDA/nda-common.jsonld",
+        "@id": "https://raw.githubusercontent.com/sanuann/schema-standardization/feature_schema_ui/activities/NDA/nda-common.jsonld",
         "@type": "@id"
     },
     "phq9_schema": {
-        "@id": "https://raw.githubusercontent.com/Repronim/schema-standardization/master/activities/PHQ-9/phq9_schema.jsonld",
+        "@id": "https://raw.githubusercontent.com/sanuann/schema-standardization/feature_schema_ui/activities/PHQ-9/phq9_schema.jsonld",
         "@type": "@id"
     },
     "ui": {

@@ -29,7 +29,7 @@
         "rdfs:label": {
             "@type": "xsd:string"
         },
-        "phq9_item": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/PHQ-9/items/",
+        "phq9_item": "https://raw.githubusercontent.com/sanuann/schema-standardization/feature_schema_ui/activities/PHQ-9/items/",
         "phq9_item:phq9_1": {
             "@type": "@id"
         },
