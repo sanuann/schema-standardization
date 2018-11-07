@@ -24,36 +24,7 @@
         "inputType": "radio",
         "shuffle": false
     },
-    "_valueConstraints": {
-        "requiredValue": false,
-        "multipleChoice": false,
-        "literals": [
-            {
-                "label": "Not at all",
-                "@value": 0
-            },
-            {
-                "label": "Several days",
-                "@value": 1
-            },
-            {
-                "label": "More than half the days",
-                "@value": 2
-            },
-            {
-                "label": "Nearly everyday",
-                "@value": 3
-            },
-            {
-                "label": "Don't know",
-                "@value": 4
-            },
-            {
-                "label": "Refuse to answer",
-                "@value": 5
-            }
-        ]
-    },
+    "_valueConstraints": "https://raw.githubusercontent.com/sanuann/schema-standardization/feature_schema_ui/activities/PHQ-9/valueConstraints.jsonld"
     "skos:related": null,
     "pav:createdOn": null,
     "pav:createdBy": null,

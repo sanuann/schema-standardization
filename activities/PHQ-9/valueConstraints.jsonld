@@ -3,6 +3,7 @@
     "minimum": 0,
     "maximum": 3,
     "multipleChoice": false,
+    "requiredValue": false,
     "literals": [
         {
             "label": "Not at all",
