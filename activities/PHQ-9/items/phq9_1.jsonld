@@ -1,5 +1,5 @@
 {
-    "@context": "https://raw.githubusercontent.com/sanuann/schema-standardization/master/activities/PHQ-9/context.jsonld",
+    "@context": "https://raw.githubusercontent.com/sanuann/schema-standardization/feature_schema_ui/activities/PHQ-9/context.jsonld",
     "@type": "https://schema.metadatacenter.org/core/TemplateField",
     "title": {
         "@language": "en",
@@ -24,7 +24,36 @@
         "inputType": "radio",
         "shuffle": false
     },
-    "_valueConstraints": "https://raw.githubusercontent.com/sanuann/schema-standardization/master/activities/PHQ-9/valueConstraints.jsonld",
+    "_valueConstraints": {
+        "requiredValue": false,
+        "multipleChoice": false,
+        "literals": [
+            {
+                "label": "Not at all",
+                "@value": 0
+            },
+            {
+                "label": "Several days",
+                "@value": 1
+            },
+            {
+                "label": "More than half the days",
+                "@value": 2
+            },
+            {
+                "label": "Nearly everyday",
+                "@value": 3
+            },
+            {
+                "label": "Don't know",
+                "@value": 4
+            },
+            {
+                "label": "Refuse to answer",
+                "@value": 5
+            }
+        ]
+    },
     "skos:related": null,
     "pav:createdOn": null,
     "pav:createdBy": null,
