@@ -1,5 +1,5 @@
 {
-    "@context": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/PHQ-9/context.jsonld",
+    "@context": "https://raw.githubusercontent.com/sanuann/schema-standardization/feature_schema_ui/activities/PHQ-9/context.jsonld",
     "@type": "https://schema.metadatacenter.org/core/TemplateField",
     "rdfs:label": "Select Language",
     "schema:description": null,
