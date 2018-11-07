@@ -24,7 +24,7 @@
         "inputType": "radio",
         "shuffle": false
     },
-    "_valueConstraints": "https://raw.githubusercontent.com/sanuann/schema-standardization/feature_schema_ui/activities/PHQ-9/valueConstraints.jsonld"
+    "_valueConstraints": "https://raw.githubusercontent.com/sanuann/schema-standardization/feature_schema_ui/activities/PHQ-9/valueConstraints.jsonld",
     "skos:related": null,
     "pav:createdOn": null,
     "pav:createdBy": null,
