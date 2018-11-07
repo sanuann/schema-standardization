@@ -13,7 +13,7 @@
             "@type": "@id"
         },
         "phq9_2": {
-            "@id": "https://cdn.rawgit.com/akeshavan/schema-standardization/master/activities/PHQ-9/items/phq9_2.jsonld",
+            "@id": "https://raw.githubusercontent.com/akeshavan/schema-standardization/master/activities/PHQ-9/items/phq9_1.jsonld",
             "@type": "@id"
         },
         "phq9_3": {
