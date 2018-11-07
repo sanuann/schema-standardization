@@ -1,7 +1,10 @@
 {
     "@context": "https://raw.githubusercontent.com/sanuann/schema-standardization/master/activities/PHQ-9/context.jsonld",
     "@type": "https://schema.metadatacenter.org/core/TemplateField",
-    "title": "PHQ-9 Q1",
+    "title": {
+        "@language": "en",
+        "@value": "Little interest or pleasure in doing things"
+    },
     "schema:description": "FDE of Q1 of the PHQ-9 Assessment",
     "schema:schemaVersion": "0.0.1",
     "question": [{
@@ -21,7 +24,7 @@
         "inputType": "radio",
         "shuffle": false
     },
-    "_valueConstraints": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/PHQ-9/valueConstraints.jsonld",
+    "_valueConstraints": "https://raw.githubusercontent.com/sanuann/schema-standardization/master/activities/PHQ-9/valueConstraints.jsonld",
     "skos:related": null,
     "pav:createdOn": null,
     "pav:createdBy": null,
