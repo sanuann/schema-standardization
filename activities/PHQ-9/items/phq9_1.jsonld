@@ -1,37 +1,28 @@
 {
-    "@context": {
-        "@version": 1.1,
-        "title": "http://schema.org/name",
-        "description": "http://schema.org/description",
-        "pav:createdBy": {
-            "@type": "@id"
-        },
-        "pav": "http://purl.org/pav/",
-        "pav:createdOn": {
-            "@type": "xsd:dateTime"
-        },
-        "oslc": "http://open-services.net/ns/core#",
-        "pav:lastUpdatedOn": {
-            "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-            "@type": "@id"
-        },
-        "bibo": "http://purl.org/ontology/bibo/",
-        "schema:description": {
-            "@type": "xsd:string"
-        },
-        "schema": "http://schema.org/",
-        "schema:name": {
-            "@type": "xsd:string"
-        }
-    },
-    "@id": "phq9-field1",
+    "@context": "https://raw.githubusercontent.com/sanuann/schema-standardization/feature_schema_ui/activities/PHQ-9/context.jsonld",
     "@type": "https://schema.metadatacenter.org/core/TemplateField",
-    "title": "Little interest or pleasure in doing things",
-    "description": null,
+    "title": {
+        "@language": "en",
+        "@value": "Little interest or pleasure in doing things"
+    },
+    "schema:description": "FDE of Q1 of the PHQ-9 Assessment",
+    "schema:schemaVersion": "0.0.1",
+    "question": [{
+        "@language": "en",
+        "@value": "Little interest or pleasure in doing things"
+    },
+        {
+            "@language": "es",
+            "@value": "Little interest or pleasure in doing things"
+        }
+    ],
+    "active_question": {
+        "item": "select_language",
+        "choice_field": "@language"
+    },
     "_ui": {
-        "inputType": "radio"
+        "inputType": "radio",
+        "shuffle": false
     },
     "_valueConstraints": {
         "requiredValue": false,
@@ -55,11 +46,18 @@
             }
         ]
     },
+    "skos:related": null,
     "pav:createdOn": null,
     "pav:createdBy": null,
     "pav:lastUpdatedOn": null,
     "oslc:modifiedBy": null,
-    "schema:schemaVersion": "0.0.1",
-    "schema:name": "Schema for question 1 of the PHQ9",
-    "schema:description": "FDE describing question 1 of the PHQ9"
+    "Meta": [ {
+        "group": "CDE",
+        "relationship": "same",
+        "notes": null,
+        "reference": "https://...."
+    },{
+        "group": "LOINC"
+    }
+    ]
 }
