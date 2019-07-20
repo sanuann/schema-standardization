@@ -42,15 +42,18 @@ let formContext = {};
 let itemOBj = { "@version": 1.1 };
 let languages = [];
 let dataArr = [];
+let activity_path = './activities';
 
+function create_directory(ins_name) {
+    mkdirp(`${activity_path}/${ins_name}/items`, function (err) {
+        if (err){
+            console.log(err);
+        }else{
+            console.log(51, 'directory structure created in activities')
+        }
+    });
+}
 // create directory structure - activities/form_name/items
-mkdirp('activities/demographics_and_background_information_v1/items', function (err) {
-    if (err){
-        console.log(err);
-    }else{
-        console.log('directory created in activities')
-    }
-});
 
 let options = {
     delimiter: ',',
@@ -76,7 +79,10 @@ readStream.pipe(csv(options))
     .on('end', function(){
         formContext['@context'] = itemOBj;
         const fc = JSON.stringify(formContext, null, 4);
-        fs.writeFile('activities/family_history_assessment_parent/' + ins_name + '_context' + '.jsonld', fc, function(err) {
+        if (!(fs.existsSync(activity_path + '/' + ins_name))) {
+            create_directory(ins_name);
+        }
+        fs.writeFile(`${activity_path}/${ins_name}/${ins_name}_context.jsonld`, fc, function(err) {
             console.log("Context created");
         });
         formContextUrl = `https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/${ins_name}/${ins_name}_context.jsonld`;
@@ -192,7 +198,11 @@ function processRow(data){
     const field_name = data['Variable / Field Name'];
     order.push(field_name);
     // write to item_x file
-    fs.writeFileSync('activities/' + ins_name + '/items/' + field_name + '.jsonld', JSON.stringify(rowData, null, 4));
+    if (!(fs.existsSync(activity_path + '/' + ins_name))) {
+        console.log(202, ins_name);
+        create_directory(ins_name);
+    }
+    fs.writeFile(`${activity_path}/${ins_name}/items/${field_name}.jsonld`, JSON.stringify(rowData, null, 4));
     graphArr.push(rowData);
 }
 
@@ -218,7 +228,11 @@ function finishSchemaCreation() {
         }
     };
     const op = JSON.stringify(jsonLD, null, 4);
-    fs.writeFile('activities/family_history_assessment_parent/' + ins_name + '_schema' + '.jsonld', op, function (err) {
+    console.log(221, fs.existsSync(activity_path + '/' + ins_name));
+    if (!(fs.existsSync(activity_path + '/' + ins_name))) {
+        create_directory(ins_name);
+    }
+    fs.writeFile(`${activity_path}/${ins_name}/${ins_name}_schema.jsonld`, op, function (err) {
         console.log("Instrument schema created");
     });
 }
