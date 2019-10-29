@@ -1,6 +1,6 @@
 {
-    "@context": [ "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/BADS/bads_context.jsonld"
+    "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/BADS/bads_context.jsonld"
     ],
     "type": "xsd:integer",
     "schema:minValue": "Not at all",

@@ -1,8 +1,8 @@
 {
-    "@context": [ "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/GAD-7/gad7_context.jsonld"
+    "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/GAD-7/gad7_context.jsonld"
     ],
-    "@type": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/schemas/Field.jsonld",
+    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
     "@id": "gad7_total_Score",
     "skos:prefLabel": "Score of GAD-7 Questionnaire",
     "skos:altLabel": "gad7_total_score",

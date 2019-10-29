@@ -1,8 +1,8 @@
 {
-    "@context": [ "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/PHQ-9/phq9_context.jsonld"
+    "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/PHQ-9/phq9_context.jsonld"
     ],
-    "@type": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/schemas/Field.jsonld",
+    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
     "@id": "phq9_10",
     "skos:prefLabel": "Q10 of PHQ-9 Questionnaire",
     "skos:altLabel": "phq9_10",

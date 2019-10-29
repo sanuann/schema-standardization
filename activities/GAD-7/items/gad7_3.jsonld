@@ -1,8 +1,8 @@
 {
-    "@context": [ "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/GAD-7/gad7_context.jsonld"
+    "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/GAD-7/gad7_context.jsonld"
     ],
-    "@type": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/schemas/Field.jsonld",
+    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
     "@id": "gad7_3",
     "skos:prefLabel": "Q3 of GAD-7 Questionnaire",
     "skos:altLabel": "gad7_3",
@@ -13,5 +13,5 @@
     "ui": {
         "inputType": "radio"
     },
-    "responseOptions": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/GAD-7/valueConstraints.jsonld"
+    "responseOptions": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/GAD-7/valueConstraints.jsonld"
 }

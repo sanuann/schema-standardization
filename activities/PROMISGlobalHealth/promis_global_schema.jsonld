@@ -1,8 +1,8 @@
 {
-    "@context": [ "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/PROMISGlobalHealth/promis_global_context.jsonld"
+    "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/PROMISGlobalHealth/promis_global_context.jsonld"
     ],
-    "@type": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/schemas/Activity.jsonld",
+    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Activity.jsonld",
     "@id": "general_health_schema",
     "skos:prefLabel": "General Health Survey",
     "skos:altLabel": "general_health_schema",

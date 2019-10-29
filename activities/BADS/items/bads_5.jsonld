@@ -1,8 +1,8 @@
 {
-    "@context": [ "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/BADS/bads_context.jsonld"
+    "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/BADS/bads_context.jsonld"
     ],
-    "@type": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/schemas/Field.jsonld",
+    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
     "@id": "bads_5",
     "skos:prefLabel": "Q5 of BADS Questionnaire",
     "skos:altLabel": "bads_5",
@@ -13,5 +13,5 @@
     "ui": {
         "inputType": "slider"
     },
-    "responseOptions": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/BADS/valueConstraints.jsonld"
+    "responseOptions": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/BADS/valueConstraints.jsonld"
 }
