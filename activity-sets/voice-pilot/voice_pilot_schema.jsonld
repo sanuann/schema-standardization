@@ -1,15 +1,15 @@
 {
-    "@context": [ "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/sanuann/schema-standardization/master/activity-sets/voice-pilot/voice_pilot_context.jsonld"
+    "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activity-sets/voice-pilot/voice_pilot_context.jsonld"
     ],
-    "@type": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/schemas/ActivitySet.jsonld",
+    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/ActivitySet.jsonld",
     "@id": "voice_pilot_schema",
     "skos:prefLabel": "Voice Pilot Protocol Activity set",
     "skos:altLabel": "voice_pilot",
     "schema:description": "activity set for UW MIT Voice Pilot Protocol",
     "schema:schemaVersion": "0.0.1",
     "schema:version": "0.0.1",
-    "schema:image": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activity-sets/voice-pilot/mit_voice_pilot_applet_image.svg?sanitize=true",
+    "schema:image": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activity-sets/voice-pilot/mit_voice_pilot_applet_image.svg?sanitize=true",
     "variableMap": [
         {"variableName": "voice_screening_schema", "isAbout": "voice_screening_schema"},
         {"variableName": "demographics_schema", "isAbout": "demographics_schema"},

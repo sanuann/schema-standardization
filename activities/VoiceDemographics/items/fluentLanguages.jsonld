@@ -1,9 +1,9 @@
 {
     "@context": [
-        "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/VoiceDemographics/demographics_context.jsonld"
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/VoiceDemographics/demographics_context.jsonld"
     ],
-    "@type": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/schemas/Field.jsonld",
+    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
     "@id": "fluentLanguages",
     "skos:prefLabel": "Fluent languages of participant",
     "skos:altLabel": "fluentLanguages",
@@ -19,7 +19,7 @@
         "requiredValue": false,
         "multipleChoice": true,
         "maxLength": 50,
-        "choiceUrl": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/resources/languages.json"
+        "choiceUrl": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/resources/languages.json"
     }
 }
 

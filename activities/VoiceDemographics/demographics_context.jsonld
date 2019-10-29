@@ -1,7 +1,7 @@
 {
     "@context": {
         "@version": 1.1,
-        "demo": "https://raw.githubusercontent.com/ReproNim/schema-standardization/master/activities/VoiceDemographics/items/",
+        "demo": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/VoiceDemographics/items/",
         "knownLanguages": {
             "@id": "demo:knownLanguages.jsonld",
             "@type": "@id"
