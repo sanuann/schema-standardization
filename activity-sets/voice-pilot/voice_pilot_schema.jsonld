@@ -47,21 +47,9 @@
         },
         "visibility":{
             "voice_screening_schema":true,
-            "demographics_schema": {
-                "method":"POST",
-                "url":"https://sig.mit.edu/vb/check",
-                "payload":["voice_screening_schema"]
-            },
-            "promis_global_schema":{
-                "method":"POST",
-                "url":"https://sig.mit.edu/vb/check",
-                "payload":["voice_screening_schema"]
-            },
-            "gad7_schema":{
-                "method":"POST",
-                "url":"https://sig.mit.edu/vb/check",
-                "payload":["voice_screening_schema"]
-            },
+            "demographics_schema": true,
+            "promis_global_schema":true,
+            "gad7_schema":true,
             "cage_aid_schema":{
                 "method":"POST",
                 "url":"https://sig.mit.edu/vb/check",
