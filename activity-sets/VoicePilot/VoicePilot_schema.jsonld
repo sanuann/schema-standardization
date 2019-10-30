@@ -1,6 +1,6 @@
 {
     "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activity-sets/VoicePilot/VoicePilot_context"
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activity-sets/VoicePilot/VoicePilot_context.jsonld"
     ],
     "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/ActivitySet.jsonld",
     "@id": "VoicePilot_schema",
