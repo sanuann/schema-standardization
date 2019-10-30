@@ -25,7 +25,6 @@
     "ui": {
         "order": [
             "VoiceScreening_schema",
-            "VoiceConsent_schema",
             "voice_task_schema",
             "Demographics_schema",
             "PROMISGlobalHealth_schema",
@@ -38,7 +37,6 @@
         "shuffle": false,
         "activity_display_name": {
             "VoiceScreening_schema": "Screening",
-            "VoiceConsent_schema": "Consent",
             "Demographics_schema": "Demographics",
             "PROMISGlobalHealth_schema": "Health",
             "gad7_schema":  "Anxiety",
@@ -50,7 +48,6 @@
         },
         "visibility":{
             "VoiceScreening_schema":true,
-            "VoiceConsent_schema": true,
             "Demographics_schema": true,
             "PROMISGlobalHealth_schema":true,
             "gad7_schema":true,
