@@ -2,12 +2,12 @@
     "@context": {
         "@version": 1.1,
         "activity_path": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/",
-        "demographics_schema": {
-            "@id": "activity_path:VoiceDemographics/demographics_schema.jsonld",
+        "Demographics_schema": {
+            "@id": "activity_path:VoiceDemographics/Demographics_schema.jsonld",
             "@type": "@id"
         },
-        "voice_screening_schema": {
-            "@id": "activity_path:VoiceScreening/voice_screening_schema.jsonld",
+        "VoiceScreening_schema": {
+            "@id": "activity_path:VoiceScreening/VoiceScreening_schema.jsonld",
             "@type": "@id"
         },
         "gad7_schema": {
@@ -18,8 +18,8 @@
             "@id": "activity_path:BADS/bads_schema.jsonld",
             "@type": "@id"
         },
-        "promis_global_schema": {
-            "@id": "activity_path:PROMISGlobalHealth/promis_global_schema.jsonld",
+        "PROMISGlobalHealth_schema": {
+            "@id": "activity_path:PROMISGlobalHealth/PROMISGlobalHealth_schema.jsonld",
             "@type": "@id"
         },
         "voice_task_schema": {
