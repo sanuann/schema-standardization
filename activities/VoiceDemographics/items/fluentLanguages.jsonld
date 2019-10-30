@@ -1,7 +1,7 @@
 {
     "@context": [
         "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/VoiceDemographics/demographics_context.jsonld"
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/VoiceDemographics/demographics_context"
     ],
     "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
     "@id": "fluentLanguages",
