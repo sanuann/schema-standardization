@@ -1,9 +1,9 @@
 {
     "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activity-sets/VoicePilot/VoicePilot_context.jsonld"
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activity-sets/VoicePilot/VoicePilot_context"
     ],
     "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/ActivitySet.jsonld",
-    "@id": "voice_pilot_schema",
+    "@id": "VoicePilot_schema",
     "skos:prefLabel": "Voice Pilot Protocol Activity set",
     "skos:altLabel": "voice_pilot",
     "schema:description": "activity set for UW MIT Voice Pilot Protocol",
