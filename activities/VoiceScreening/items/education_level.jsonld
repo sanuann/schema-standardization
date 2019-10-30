@@ -1,6 +1,6 @@
 {
     "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
-        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/VoiceScreening/voice_screening_context.jsonld"
+        "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/VoiceScreening/voice_screening_context"
     ],
     "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
     "@id": "education_level",
