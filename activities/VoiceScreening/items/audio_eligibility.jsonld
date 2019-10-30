@@ -3,7 +3,7 @@
         "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
         "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/voice_task/voice_task_context.jsonld"
     ],
-    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
+    "@type": "reproschema:Field.jsonld",
     "@id": "audio_eligibility",
     "skos:prefLabel": "Audio check result",
     "skos:altLabel": "audio_result",

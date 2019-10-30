@@ -2,7 +2,7 @@
     "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
         "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/VoiceScreening/voice_screening_context"
     ],
-    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
+    "@type": "reproschema:Field.jsonld",
     "@id": "education_level",
     "skos:prefLabel": "Education level of participant",
     "skos:altLabel": "education_level",
