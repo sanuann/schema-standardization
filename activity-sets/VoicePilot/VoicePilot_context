@@ -10,6 +10,10 @@
             "@id": "activity_path:VoiceScreening/VoiceScreening_schema",
             "@type": "@id"
         },
+        "VoiceConsent_schema" {
+            "@id": "activity_path:VoiceConsent/VoiceConsent_schema",
+            "@type": "@id"
+        }
         "gad7_schema": {
             "@id": "activity_path:GAD-7/gad7_schema.jsonld",
             "@type": "@id"

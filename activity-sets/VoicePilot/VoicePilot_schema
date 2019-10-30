@@ -12,6 +12,7 @@
     "schema:image": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activity-sets/VoicePilot/mit_voice_pilot_applet_image.svg?sanitize=true",
     "variableMap": [
         {"variableName": "VoiceScreening_schema", "isAbout": "VoiceScreening_schema"},
+        {"variableName": "VoiceConsent_schema", "isAbout": "VoiceConsent_schema"},
         {"variableName": "Demographics_schema", "isAbout": "Demographics_schema"},
         {"variableName": "PROMISGlobalHealth_schema", "isAbout": "PROMISGlobalHealth_schema"},
         {"variableName": "gad7_schema", "isAbout": "gad7_schema"},
@@ -24,6 +25,7 @@
     "ui": {
         "order": [
             "VoiceScreening_schema",
+            "VoiceConsent_schema",
             "voice_task_schema",
             "Demographics_schema",
             "PROMISGlobalHealth_schema",
@@ -36,6 +38,7 @@
         "shuffle": false,
         "activity_display_name": {
             "VoiceScreening_schema": "Screening",
+            "VoiceConsent_schema": "Consent",
             "Demographics_schema": "Demographics",
             "PROMISGlobalHealth_schema": "Health",
             "gad7_schema":  "Anxiety",
@@ -47,6 +50,7 @@
         },
         "visibility":{
             "VoiceScreening_schema":true,
+            "VoiceConsent_schema": true,
             "Demographics_schema": true,
             "PROMISGlobalHealth_schema":true,
             "gad7_schema":true,
