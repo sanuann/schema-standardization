@@ -4,7 +4,7 @@
         "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/voice_task/voice_task_context.jsonld"
     ],
     "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
-    "@id": "audio result",
+    "@id": "audio_eligibility",
     "skos:prefLabel": "Audio check result",
     "skos:altLabel": "audio_result",
     "schema:description": "audio check result",
