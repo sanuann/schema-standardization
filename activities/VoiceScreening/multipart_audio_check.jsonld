@@ -2,7 +2,7 @@
     "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
         "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/VoiceScreening/voice_screening_context"
     ],
-    "@type": "reproschema:Activity.jsonld",
+    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Activity.jsonld",
     "@id": "audio_check_schema",
     "skos:prefLabel": "audio check",
     "skos:altLabel": "audio_check",

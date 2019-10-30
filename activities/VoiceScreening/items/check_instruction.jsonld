@@ -2,7 +2,7 @@
     "@context": [ "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/contexts/generic.jsonld",
         "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/activities/voice_task/voice_task_context.jsonld"
     ],
-    "@type": "reproschema:Field.jsonld",
+    "@type": "https://raw.githubusercontent.com/sanuann/schema-standardization/debug-schema-ui/schemas/Field.jsonld",
     "@id": "phq8_1",
     "skos:prefLabel": "Audio Check instructions",
     "skos:altLabel": "audi_check_ins",
