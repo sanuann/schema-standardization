@@ -7,7 +7,7 @@
             "@type": "@id"
         },
         "VoiceScreening_schema": {
-            "@id": "activity_path:VoiceScreening/VoiceScreening_schema",
+            "@id": "activity_path:VoiceScreening/VoiceScreening_schema.jsonld",
             "@type": "@id"
         },
         "VoiceConsent_schema" {
