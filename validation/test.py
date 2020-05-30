@@ -50,7 +50,7 @@ reproschema:FieldShape
         sh:minCount 1 ;
     ] ;
    sh:property [
-        sh:path reproterms:valueconstraints ;
+        sh:path reproterms:responseOptions ;
         sh:node reproterms:ResponseOptionsShape ;
         sh:minCount 1 ;
    ] .
@@ -76,7 +76,7 @@ reproterms:ResponseOptionsShape
     ] ;
     sh:property [
         sh:path reproterms:valueType ;
-        sh:datatype xsd:string ;
+        sh:or ( [ sh:datatype xsd:integer ] [ sh:datatype xsd:string ] );
     ] ;
     sh:property [
         sh:path schema:itemListElement ;
@@ -109,60 +109,45 @@ schema:ChoicesShape
 '''
 data_file = '''
 {
-    "@context": [ "https://raw.githubusercontent.com/ReproNim/reproschema/master/contexts/generic"
-     ],
-    "@type": "reproschema:Field",
-    "@id": "phq9_8",
-    "prefLabel": "PHQ9-8",
-    "schema:description": "schema for Q8 of the PHQ-9 Assessment",
-    "schema:schemaVersion": "0.0.1",
-    "schema:version": "0.0.1",
-    "question": {
-        "en": "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual?",
-        "es": "¿Se ha movido o hablado tan lento que otras personas podrían haberlo notado? o lo contrario – muy inquieto(a) o agitado(a) que ha estado moviéndose mucho más de lo normal?"
-    },
-    "ui": {
-        "inputType": "radio"
-    },
-    "responseOptions": {
-    "@context": [ "https://raw.githubusercontent.com/ReproNim/reproschema/master/contexts/generic" ],
-    "valueType": "xsd:integer",
-    "schema:minValue": 0,
-    "schema:maxValue": 3,
-    "multipleChoice": false,
-    "requiredValue": true,
-    "choices": [
-    {
-        "name": {
-            "en": "Not at all",
-            "es": "Para nada"
-        },
-        "value": 0
-    },
-    {
-        "name": {
-            "en": "Several days",
-            "es": "Varios días"
-        },
-        "value": 1
-    },
-    {
-        "name": {
-            "en": "More than half the days",
-            "es": "Más de la mitad de los días"
-        },
-        "value": 2
-    },
-    {
-        "name": {
-            "en": "Nearly everyday",
-            "es": "Casi todos los días"
-        },
-        "value": 3
-    }
-    ]
+"@context": [
+"http://0.0.0.0:8000/contexts/generic"
+],
+"@type": "reproschema:Field",
+"@id": "phq9_10",
+"skos:prefLabel": "PHQ9-10",
+"schema:description": "schema for Q10 of the PHQ-9 Assessment",
+"schema:schemaVersion": "0.0.1",
+"schema:version": "0.0.1",
+"question": {
+"en": "How difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?",
+"es": "¿Qué tanta dificultad le han dado estos problemas para hacer su trabajo, encargarse de las tareas del hogar, o llevarse bien con otras personas?"
+},
+"ui": {
+"inputType": "radio"
+},
+"responseOptions": {
+"valueType": "xsd:integer",
+"minValue": 0,
+"maxValue": 3,
+"multipleChoice": false,
+"requiredValue": false,
+"choices": [
+{
+"name": {
+"en": "Not difficult at all",
+"es": "No ha sido difícil"
+},
+"value": 0
+},
+{
+"name": {
+"en": "Somewhat difficult",
+"es": "Un poco difícil"
+},
+"value": 1
 }
-
+]
+}
 }
 '''
 import pyld
@@ -172,17 +157,17 @@ shapes_file_format = 'turtle'
 
 data = json.loads(data_file)
 normalized = pyld.jsonld.normalize(
-    data, {'algorithm': 'URDNA2015', 'format':
+    data, {'algorithm': 'URDNA2015', 'base': 'https://raw.githubusercontent.com/ReproNim/reproschema/master/activities/PHQ-9/items/', 'format':
         'application/n-quads'})
+# print(160, normalized)
 conforms, v_graph, v_text = validate(normalized, shacl_graph=shapes_file,
                                      data_graph_format='nquads',
                                      shacl_graph_format=shapes_file_format,
-                                     inference='rdfs', debug=True,
+                                     inference='rdfs', debug=False,
                                      serialize_report_graph=True)
 
 print(conforms, v_text)
 print(str(v_graph))
-
 
 
 for root, dirs, files in os.walk('./activities/PHQ-9/items'):
@@ -193,15 +178,17 @@ for root, dirs, files in os.walk('./activities/PHQ-9/items'):
             with open(file_path) as fp:
                 data = json.load(fp)
                 normalized = pyld.jsonld.normalize(
-                    data, {'algorithm': 'URDNA2015', 'format':
-                        'application/n-quads'})
+                    data, {'algorithm': 'URDNA2015', 'base':
+                        'https://raw.githubusercontent.com/ReproNim/reproschema/master/activities/PHQ-9/items/',
+                           'format': 'application/n-quads'})
                 print(normalized)
-                conforms, v_graph, v_text = validate(normalized, shacl_graph=shapes_file,
-                                                     data_graph_format='nquads',
-                                                     shacl_graph_format=shapes_file_format,
-                                                     inference='rdfs', debug=True,
-                                                     serialize_report_graph=True)
-                print('------', conforms, v_text)
-                print(str(v_graph))
-
+#                 conforms, v_graph, v_text = validate(normalized, shacl_graph=shapes_file,
+#                                                      data_graph_format='nquads',
+#                                                      shacl_graph_format=shapes_file_format,
+#                                                      inference='rdfs', debug=False,
+#                                                      serialize_report_graph=True)
+#                 if not conforms:
+#                     print('------', conforms, v_text)
+#                 # print(str(v_graph))
+#
             fp.close()
