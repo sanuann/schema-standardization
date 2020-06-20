@@ -54,11 +54,11 @@ Properties of each of the above schema are described below:
 
 ## 5.0: How can I create a new activity and protocol
 
-### 5.1: Programmatic schema generation: 
+### 5.1: Programmatic schema generation:
 - Tool to convert redcap CSVs to our schema format. But it cannot be used to convert every redcap-formatted table as some are customized redcap tables (for example the 100s that are in ABCD) but does cover most cases. A template of the CSV and how to use the tool can be found [here](https://github.com/sanuann/reproschema-builder)
 - Python package to generate JSON-LDs in our schema format. [repo](https://github.com/akeshavan/mindlogger-build-applet)
 
-### 5.2: Manual schema generation: 
+### 5.2: Manual schema generation:
 Fork the project and manually create the jsonld files according to the above directory structure. (This process will be tedious for large
  questionnaires).
 
@@ -72,7 +72,7 @@ Fork the project and manually create the jsonld files according to the above dir
     - `activityName_context` : context to define keys used specific to the activity schema
 
   - Creating `activityName_schema` – use the keys defined in [`schemas/Activity`](./schemas/Activity). If any other keys are used, then define them in `activityName_context`
-  
+
   For example,
   ```
     {
@@ -126,7 +126,7 @@ Fork the project and manually create the jsonld files according to the above dir
     }
   }
   ```
-  
+
   - Mandatory keys:
     - `@context` - [Array] Include the ReproNim generic context JSON-LD file along with the activity context.
     - `@type`- describes type of the schema.
@@ -164,30 +164,26 @@ Fork the project and manually create the jsonld files according to the above dir
       ```
     - `@type`=`"https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Protocol"`
 
-## 6.0: Test schema and collect data
 
-First, make sure your syntax is in correct jsonld format. Test all files with ```@content``` from command line:
+## Serving the doc locally
+
+This project uses [MkDocs](https://www.mkdocs.org/) tool with [Material theme](https://squidfunk.github.io/mkdocs-material/) and extra plugins to generate the website.
+
+To test locally, you will need to install the Python dependencies. To do that, type the following commands:
+
 ```
-npm install -g jsonlint
-grep -r --exclude-dir=node_modules --exclude-dir=ui --exclude-dir=.github "@context" . | cut -d: -f1 | xargs -I fname jsonlint -q fname
+git clone https://github.com/ReproNim/reproschema.git
+cd reproschema
+pip install -r requirements.txt
 ```
 
-Or test individual files here: ```https://jsonlint.com/```
+If you are working on your *fork*, simply replace `https://github.com/ReproNim/reproschema.git` by `git clone git@github.com:<username>/reproschema.git` where `<username>` is your GitHub username
 
-Then you can view your schema here:
+Once done, you need to run MkDocs. Simply type:
 
-`http://schema.repronim.org/ui/#/?url=path_to_protocol_schema`
+```
+mkdocs serve
+```
 
-For example: 
-
-`
-https://schema.repronim.org/ui/#/?url=https://raw.githubusercontent.com/sensein/covid19/master/protocol/Covid19_schema
-`
-
-
-
-## 7.0: Why linked data?
-
-## 8.0: How these activities are licensed?
-
-## 9.0: Which tools will/are supporting this standard?
+Finally, open up [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/) in your browser, and you
+should see the default home page of the being displayed.
