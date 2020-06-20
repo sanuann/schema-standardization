@@ -7,8 +7,6 @@ redcap-formatted table as some are customized redcap tables (for example the 100
 but does cover most cases. A template of the CSV and how to use the tool can be found
 [here](https://github.com/sanuann/reproschema-builder)
 
-Python package to generate JSON-LDs in our schema format. [repo](https://github.com/akeshavan/mindlogger-build-applet)
-
 ## Manual schema generation
 
 Fork the project and manually create the jsonld files according to the above directory structure.
@@ -97,7 +95,7 @@ Mandatory keys:
 -   `isAbout` - file name of the corresponding variable name
 -   `ui.order` - [Array] defines the order in which the items appear in the activity
 
-### Create itms
+#### Create items
 
 To create `item_x` in the items folder:
 
