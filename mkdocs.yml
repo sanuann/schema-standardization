@@ -13,9 +13,16 @@ theme:
 # Pages
 nav:
   - Introduction: "introduction.md"
+  - Schema structure: "schema_structure.md"
   - How can I create a new activity and protocol?: "create_new_activity_protocol.md"
   - Testing your schema and collecting data: "testing_using_schema.md"
   - Why linked data?: "why_linked_data.md"
   - How these activities are licensed?: "how_these_activities_are_licensed.md"
   - Which tools will/are supporting this standard?: "tools_supporting_standard.md"
   - Schemas properties: "schema_properties.md"
+
+
+# list of extension
+markdown_extensions:
+  - admonition
+  - pymdownx.details
