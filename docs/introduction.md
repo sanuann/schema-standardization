@@ -1,10 +1,8 @@
 # Introduction
 
-This documentation describes and explains the ReproNim schema specification.
+Cognitive and clinical assessments are used throughout neuroscience. Despite many efforts ([Cognitve Atlas](https://www.cognitiveatlas.org/), [Cognitive Paradigm Ontology](http://www.cogpo.org/), [OOve]( ??? )) there is little consistency exists in assessment data acquisition or response representation across studies. Each project tends to use its own schema, format and data collection tool (paper, form, ...). This highlights the need for harmonization across projects. However, harmonizing data after acquisition is resource intensive. Currently, the NIMH Data Archive (NDA) enforces harmonization during data submission and this approach can create a mismatch between collected and submitted data.
 
-Cognitive and clinical assessments are used throughout neuroscience, but little consistency exists in assessment data acquisition or response representation across studies. Harmonizing data after acquisition is resource intensive. Currently, the NIMH Data Archive (NDA) enforces harmonization during data submission. This approach can create a mismatch between collected and submitted data.
-
-Reverse engineering the NDA data dictionaries to their original assessments using a tool like Brainverse can be tedious. Thus to enforce consistency at the data acquisition stage, we created a standard schema and a set of reusable common assessments. The schema extends and modifies the [CEDAR metadata representation](ref).
+Reverse engineering the NDA data dictionaries to their original assessments using a tool like Brainverse can be tedious. Thus to enforce consistency at the data acquisition stage, we created a standard schema and a set of reusable common assessments. The schema extends and modifies the [CEDAR metadata representation]( ??? ).
 
 Using JSON-LD, we represent:
 
@@ -21,29 +19,16 @@ An implementation of the schema can specify:
 This schema :
 
 -   allows internationalization (i.e having the same questionaire in multiple languages),
--   is implementation agnostic (no matter if the app),
+-   is implementation agnostic (no matter if the app used to render the questionaire is written in javascript, python...),
 -   tracks variations in assessments (e.g., PHQ-9, PHQ-8).
 
 This open and accessible schema library with appropriate conversion (e.g., to RedCap) and data collection tools (e.g., [MindLogger](https://mindlogger.org/), LORIS, RedCap) enables more consistent acquisition across projects, with results being harmonized by design.
 
-## Need for Standardizing assessments
-
-- Cognitive and Clinical assessments are used throughout neuroimaging to perform deep phenotyping
-- Despite many efforts (Cog Atlas, Cognitive Paradigm Ontology, OOve) no consistency in data representation across projects
-- Each project uses own schema, format, data collection tool (paper, form)
-- Need for harmonization across projects
-  - NIMH Data Archive enforces harmonization during submission
-    - Significant effort
-    - Creates mismatch between experiment and stored data
+<!-- ## Need for Standardizing assessments
   - Harmonize large projects
     - ABCD
     - CONP
-- Collaborations: ABCD, Healthy Brain Network, LORIS/CONP
-- We used CEDAR templates as a starting point
-- Developed cleaner JSON-LD representation to represent:
-  - __Protocols__: Collections of activities performed by a participant
-  - __Activity__: Individual assessments
-  - __Items__: Elements of individual assessments
+- Collaborations: ABCD, Healthy Brain Network, LORIS/CONP -->
 
 ## Advantages of current representation
 
