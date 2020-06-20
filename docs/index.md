@@ -2,22 +2,34 @@
 
 This documentation describes and explains the ReproNim schema specification.
 
-## 0.0: Contents
+## Introduction
 
-- [1.0: Introduction](#10-introduction)
-- [2.0: Need for Standardizing assessments](#20-need-for-standardizing-assessments)
-- [3.0: Advantages of current representation](#30-advantages-of-current-representation)
-- [4.0: Schema](#40-schema)
-- [5.0: Contribute - how to create activity, protocol?](#50-how-can-i-create-a-new-activity-and-protocol)
-- [6.0: Test schema and collect data](#60-view-schema-and-collect-data)
-- [7.0: Why linked data?]()
-- [8.0: How these activities are licensed?]()
-- [9.0: Which tools will/are supporting this standard?]()
+Cognitive and clinical assessments are used throughout neuroscience, but little consistency exists in assessment data acquisition or response representation across studies. Harmonizing data after acquisition is resource intensive. Currently, the NIMH Data Archive (NDA) enforces harmonization during data submission. This approach can create a mismatch between collected and submitted data.
 
-## 1.0: Introduction
-Cognitive and clinical assessments are used throughout neuroscience, but little consistency exists in assessment data acquisition or response representation across studies. Harmonizing data after acquisition is resource intensive. Currently, the NIMH Data Archive (NDA) enforces harmonization during data submission. This approach can create a mismatch between collected and submitted data. Reverse engineering NDA data dictionaries to their original assessments using a tool like Brainverse can be tedious. To enforce consistency at the data acquisition stage, we created a standard schema and a set of reusable common assessments. The schema extends and modifies the CEDAR metadata representation. Using JSON-LD, we represent Items (elements of individual assessments) or Scores, Activities (individual assessments), and Protocols (collections of activities performed by a participant). An implementation of the schema  can specify scoring logic, branching logic, and user interface rendering options. The schema allows internationalization (multiple languages), is implementation agnostic, and tracks variations in assessments (e.g., PHQ-9, PHQ-8). This open and accessible schema library with appropriate conversion (e.g., to RedCap) and data collection tools (e.g., [MindLogger](https://mindlogger.org/), LORIS, RedCap) enables more consistent acquisition across projects, with results being harmonized by design.
+Reverse engineering the NDA data dictionaries to their original assessments using a tool like Brainverse can be tedious. Thus to enforce consistency at the data acquisition stage, we created a standard schema and a set of reusable common assessments. The schema extends and modifies the [CEDAR metadata representation](ref).
 
-## 2.0: Need for Standardizing assessments
+Using JSON-LD, we represent:
+
+-   `Items` - elements of individual assessments, e.g an single question in a questionaire
+-   `Activities` - individual assessments, e.g a whole questionaire
+-   `Protocols` - collections of activities performed by a participant, e.g a set o questionaire that was used in a study.
+
+An implementation of the schema can specify:
+
+-   scoring logic, how the total score to the responses on a questionaire should be computed
+-   branching logic,
+-   user interface rendering options.
+
+This schema :
+
+-   allows internationalization (i.e having the same questionaire in multiple languages),
+-   is implementation agnostic (no matter if the app),
+-   tracks variations in assessments (e.g., PHQ-9, PHQ-8).
+
+This open and accessible schema library with appropriate conversion (e.g., to RedCap) and data collection tools (e.g., [MindLogger](https://mindlogger.org/), LORIS, RedCap) enables more consistent acquisition across projects, with results being harmonized by design.
+
+## Need for Standardizing assessments
+
 - Cognitive and Clinical assessments are used throughout neuroimaging to perform deep phenotyping
 - Despite many efforts (Cog Atlas, Cognitive Paradigm Ontology, OOve) no consistency in data representation across projects
 - Each project uses own schema, format, data collection tool (paper, form)
@@ -35,7 +47,8 @@ Cognitive and clinical assessments are used throughout neuroscience, but little 
   - __Activity__: Individual assessments
   - __Items__: Elements of individual assessments
 
-## 3.0: Advantages of current representation
+## Advantages of current representation
+
 - Rich contexts with JSON-LD
   - Redcap uses CSVs to represent forms
 - Single source of curated assessments from [ReproNim](https://github.com/ReproNim)
@@ -45,7 +58,8 @@ Cognitive and clinical assessments are used throughout neuroscience, but little 
 - Implementation agnostic – schema can be used by several software
 - Still a linked data graph and can be validated using [SHACL](https://www.w3.org/TR/shacl/)
 
-## 4.0: Schema
+## Schema
+
 We have defined 3 different types of schema –
 - [Protocol](https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Protocol)
 - [Activity](https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Activity)
@@ -63,19 +77,19 @@ Schema overall structure:
   - `activityName_schema` : schema to define the activity
   - `activityName_context` : context to define keys used specific to the activity schema
   - sub-activity jsonld schemas (if any)
-  
+
 Note: All schema and context files above are saved without a `.jsonld` files extension.
 
 The generic keys are defined in the generic context file (contexts/generic)
 
 
-## 5.0: How can I create a new activity and protocol
+## How can I create a new activity and protocol
 
-### 5.1: Programmatic schema generation: 
+### Programmatic schema generation:
 - Tool to convert redcap CSVs to our schema format. But it cannot be used to convert every redcap-formatted table as some are customized redcap tables (for example the 100s that are in ABCD) but does cover most cases. A template of the CSV and how to use the tool can be found [here](https://github.com/sanuann/reproschema-builder)
 - Python package to generate JSON-LDs in our schema format. [repo](https://github.com/akeshavan/mindlogger-build-applet)
 
-### 5.2: Manual schema generation: 
+### Manual schema generation:
 Fork the project and manually create the jsonld files according to the above directory structure. (This process will be tedious for large
  questionnaires).
 
@@ -89,7 +103,7 @@ Fork the project and manually create the jsonld files according to the above dir
     - `activityName_context` : context to define keys used specific to the activity schema
 
   - Creating `activityName_schema` – use the keys defined in [`schemas/Activity`](./schemas/Activity). If any other keys are used, then define them in `activityName_context`
-  
+
   For example,
   ```
     {
@@ -143,7 +157,7 @@ Fork the project and manually create the jsonld files according to the above dir
     }
   }
   ```
-  
+
   - Mandatory keys:
     - `@context` - [Array] Include the ReproNim generic context JSON-LD file along with the activity context.
     - `@type`- describes type of the schema.
@@ -181,7 +195,7 @@ Fork the project and manually create the jsonld files according to the above dir
       ```
     - `@type`=`"https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Protocol"`
 
-## 6.0: Test schema and collect data
+## Test schema and collect data
 
 First, make sure your syntax is in correct jsonld format. Test all files with ```@content``` from command line:
 ```
@@ -195,7 +209,7 @@ Then you can view your schema here:
 
 `http://schema.repronim.org/ui/#/?url=path_to_protocol_schema`
 
-For example: 
+For example:
 
 `
 https://schema.repronim.org/ui/#/?url=https://raw.githubusercontent.com/sensein/covid19/master/protocol/Covid19_schema
@@ -203,8 +217,8 @@ https://schema.repronim.org/ui/#/?url=https://raw.githubusercontent.com/sensein/
 
 
 
-## 7.0: Why linked data?
+## Why linked data?
 
-## 8.0: How these activities are licensed?
+## How these activities are licensed?
 
-## 9.0: Which tools will/are supporting this standard?
+## Which tools will/are supporting this standard?
