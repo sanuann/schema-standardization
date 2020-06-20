@@ -2,16 +2,22 @@
 
 ## Programmatic schema generation
 
-- Tool to convert redcap CSVs to our schema format. But it cannot be used to convert every redcap-formatted table as some are customized redcap tables (for example the 100s that are in ABCD) but does cover most cases. A template of the CSV and how to use the tool can be found [here](https://github.com/sanuann/reproschema-builder)
-- Python package to generate JSON-LDs in our schema format. [repo](https://github.com/akeshavan/mindlogger-build-applet)
+Tool to convert redcap CSVs to our schema format. But it cannot be used to convert every
+redcap-formatted table as some are customized redcap tables (for example the 100s that are in ABCD)
+but does cover most cases. A template of the CSV and how to use the tool can be found
+[here](https://github.com/sanuann/reproschema-builder)
+
+Python package to generate JSON-LDs in our schema format. [repo](https://github.com/akeshavan/mindlogger-build-applet)
 
 ## Manual schema generation
 
-Fork the project and manually create the jsonld files according to the above directory structure. (This process will be tedious for large questionnaires).
+Fork the project and manually create the jsonld files according to the above directory structure.
+(This process will be tedious for large questionnaires).
 
 ### Create an activity
 
-Under the [`activities`](./activities) directory, create directory with name of activity in the `CamelCase` naming convention.
+Under the [`activities`](./activities) directory, create directory with name of activity in the
+`CamelCase` naming convention.
 
 Activity directory structure:
 
@@ -22,7 +28,8 @@ Activity directory structure:
 -   `activityName_schema` : schema to define the activity
 -   `activityName_context` : context to define keys used specific to the activity schema
 
-Creating `activityName_schema` – use the keys defined in [`schemas/Activity`](./schemas/Activity). If any other keys are used, then define them in `activityName_context`
+Creating `activityName_schema` – use the keys defined in [`schemas/Activity`](./schemas/Activity).
+If any other keys are used, then define them in `activityName_context`
 
 For example,
 
@@ -81,32 +88,36 @@ For example,
 
 Mandatory keys:
 
-- `@context` - [Array] Include the ReproNim generic context JSON-LD file along with the activity context.
-- `@type`- describes type of the schema.
-- `@id` - unique id for the schema. should be same as the filename.
-- `skos:prefLabel` - display name for the schema
-- `ui.addProperties` - defines the various properties of each item.
-- `variablename` - variable name used in `ui.order` for the items
-- `isAbout` - file name of the corresponding variable name
-- `ui.order` - [Array] defines the order in which the items appear in the activity
+-  `@context` - [Array] Include the ReproNim generic context JSON-LD file along with the activity context.
+-   `@type`- describes type of the schema.
+-   `@id` - unique id for the schema. should be same as the filename.
+-   `skos:prefLabel` - display name for the schema
+-   `ui.addProperties` - defines the various properties of each item.
+-   `variablename` - variable name used in `ui.order` for the items
+-   `isAbout` - file name of the corresponding variable name
+-   `ui.order` - [Array] defines the order in which the items appear in the activity
 
-- To create `item_x` in the items folder:
+### Create itms
 
-  - Use keys defined in [`schemas/Field`](./schemas/Field)
-  - `@type`=`"https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Field"`
-  - `responseOptions` – can be embedded or can point to a remote JSON-LD object.
+To create `item_x` in the items folder:
+
+-   Use keys defined in [`schemas/Field`](./schemas/Field)
+-   `@type`=`"https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Field"`
+-   `responseOptions` – can be embedded or can point to a remote JSON-LD object.
 
 ### To create a protocol
 
-  - Under the [`protocols`](./protocols) directory, create directory with name of protocol in the CamelCase naming convention.
-  - protocol directory structure:
-    - `protocolName_schema` : schema to define the protocol
-    - `protocolName_context` : context to define keys used specific to the protocol schema
+-   Under the [`protocols`](./protocols) directory, create directory with name of protocol in the CamelCase naming convention.
+-   protocol directory structure:
+    -   `protocolName_schema` : schema to define the protocol
+    -   `protocolName_context` : context to define keys used specific to the protocol schema
 
-  - Creating `protocolName_schema` – use the keys defined in [`schemas/Protocol`](./schemas/Protocol). If any other keys are used, then define them in `protocolName_context`
+Creating `protocolName_schema` – use the keys defined in [`schemas/Protocol`](./schemas/Protocol).
+If any other keys are used, then define them in `protocolName_context`
 
-  - Description of some other keys:
-    - `@context` – Array. Include the ReproNim generic context JSON-LD file along with the protocol context.
+Description of some other keys:
+
+-   `@context` – Array. Include the ReproNim generic context JSON-LD file along with the protocol context.
 
 For example,
 
@@ -119,4 +130,4 @@ For example,
 }
 ```
 
-- `@type`=`"https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Protocol"`
+-   `@type` = `"https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Protocol"`
