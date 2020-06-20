@@ -1,10 +1,5 @@
 # Properties of the schemas
 
-## Glossary
-
--   Domain
--   Range
-
 ## Properties of the Protocol schema
 
 |         Property         |                                                                                                                                 Description                                                                                                                                  |        Domain        |              Range               |

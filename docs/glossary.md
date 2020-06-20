@@ -1,0 +1,4 @@
+# Glossary
+
+-   Domain
+-   Range
