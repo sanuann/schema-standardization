@@ -1,4 +1,12 @@
-# Properties of Protocol schema
+# Properties of the schemas
+
+## Glossary
+
+-   Domain
+-   Range
+
+## Properties of the Protocol schema
+
 |         Property         |                                                                                                                                 Description                                                                                                                                  |        Domain        |              Range               |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------------------------------|
 | skos:prefLabel           | The preferred name of the protocol.                                                                                                                                                                                                                                          | reproschema:Protocol | schema:Text                      |
@@ -11,7 +19,9 @@
 | reproterms:allow         | An array to list the properties allowed in a protocol, assessment or field.                                                                                                                                                                                                  | reproschema:Protocol | schema:Text                      |
 | reproterms:landingPage   | An element (by URL) to link to the protocol introduction.                                                                                                                                                                                                                    | reproschema:Protocol | schema:URL                       |
 | reproterms:scoringLogic  | An array of objects indicating score in an activity or protocol and the score Field item                                                                                                                                                                                     | reproschema:Protocol | reproschema:ScoringLogic         |
-# Properties of Activity schema
+
+## Properties of the Activity schema
+
 |         Property         |                                                                                                                                 Description                                                                                                                                  |        Domain        |                 Range                  |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------------------------------------|
 | skos:prefLabel           | The preferred name of the assessment.                                                                                                                                                                                                                                        | reproschema:Activity | schema:Text                            |
@@ -24,7 +34,9 @@
 | reproterms:shuffle       | An element (bool) to determine if the list of items is shuffled or in order.                                                                                                                                                                                                 | reproschema:Activity | schema:boolean                         |
 | reproterms:addProperties | An array of objects to describe the various properties added to assessments and fields.                                                                                                                                                                                      | reproschema:Activity | reproschema:AddProperties              |
 | reproterms:scoringLogic  | An array of objects indicating score in an activity or protocol and the score Field item                                                                                                                                                                                     | reproschema:Activity | reproschema:ScoringLogic               |
-# Properties of Field schema
+
+## Properties of the Item schema
+
 |         Property         |                                                                                                                                 Description                                                                                                                                  |        Domain        |                 Range                  |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------------------------------------|
 | skos:prefLabel           | The preferred name of the assessment.                                                                                                                                                                                                                                        | reproschema:Activity | schema:Text                            |
