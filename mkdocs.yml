@@ -1,1 +1,21 @@
-site_name: My Docs
+site_name: Reproschema documentation
+repo_name: 'ReproNim/reproschema'
+repo_url: 'https://github.com/ReproNim/reproschema'
+
+# This will use Material them
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'light blue'
+    accent: 'light blue'
+
+# Pages
+nav:
+  - Introduction: "introduction.md"
+  - How can I create a new activity and protocol?: "create_new_activity_protocol.md"
+  - Testing your schema and collecting data: "testing_using_schema.md"
+  - Why linked data?: "why_linked_data.md"
+  - How these activities are licensed?: "how_these_activities_are_licensed.md"
+  - Which tools will/are supporting this standard?: "tools_supporting_standard.md"
+  - Schemas properties: "schema_properties.md"
