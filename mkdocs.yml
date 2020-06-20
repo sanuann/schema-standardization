@@ -12,7 +12,7 @@ theme:
 
 # Pages
 nav:
-  - Introduction: "introduction.md"
+  - Introduction: "01_introduction.md"
   - Schema structure: "schema_structure.md"
   - How can I create a new activity and protocol?: "create_new_activity_protocol.md"
   - Testing your schema and collecting data: "testing_using_schema.md"
@@ -26,3 +26,4 @@ nav:
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - pymdownx.critic
