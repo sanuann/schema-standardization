@@ -1,6 +1,12 @@
 # Schema structure
 
+## Style guides
+
 {==⚠️ Note: All schema and context files above are saved without a `.jsonld` files extension. ⚠️ ==}
+
+We recomment that the name the `protocol` and `activities` directory follow the `CamelCase` naming convention.
+
+## Overall structure
 
 We have defined 3 different types of schema
 
@@ -10,17 +16,13 @@ We have defined 3 different types of schema
 
 ## Protocol
 
-The protocol directory structure: name the directory in the `CamelCase` naming convention.
-
-It contains the following:
+The protocol directory structure contains the following:
 
 [TO DO]
 
 ## Activity
 
-The activity directory structure: name the directory with name of activity in the `CamelCase` naming convention.
-
-It contains the following:
+The activity directory structure contains the following:
 
 -   `/items`: directory containing the jsonld files for individual items of the activity schema
     -   `item_1`
