@@ -32,21 +32,6 @@ alt="reposchema"
 style="width: 800px; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 
-```
-├── activities
-│   └── templateActivity
-│       ├── items
-│       │   └── item-1_select
-│       ├── templateActivity_context
-│       └── templateActivity_schema
-├── protocols
-│   └── templateProtocol
-│       ├── README.md
-│       ├── templateProtocol_context
-│       └── templateProtocol_schema
-└── README.md
-```
-
 ## Protocol
 
 The protocol directory structure contains the following:
