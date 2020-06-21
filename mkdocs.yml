@@ -12,6 +12,7 @@ theme:
 
 # Pages
 nav:
+  - Welcome: "index.md"
   - Introduction: "01_introduction.md"
   - Schema structure: "schema_structure.md"
   - How can I create a new activity and protocol?: "create_new_activity_protocol.md"
