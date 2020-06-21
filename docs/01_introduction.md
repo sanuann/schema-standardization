@@ -26,7 +26,7 @@ a standard schema and a set of reusable common assessments. The schema extends a
 
 Using JSON-LD, we represent:
 
--   `Items` - elements of individual assessments, e.g an single question in a questionaire
+-   `Items` - elements of individual assessments, e.g a single question in a questionaire
 -   `Activities` - individual assessments that contains a set of `Items`, e.g a whole questionaire
     with a set of questions
 -   `Protocols` - collections of activities performed by a participant, e.g a set of questionaire used in a study.
@@ -36,7 +36,7 @@ Each `Item`, `Activity`, and `Protocol` provides unique and persistent identifie
 An implementation of the schema can specify:
 
 -   scoring logic, how the total score to the responses on a questionaire should be computed
--   branching logic,
+-   visibility, whether a given item or activity should be displayed to the user,
 -   user interface rendering options.
 
 This schema :
