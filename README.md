@@ -1,28 +1,24 @@
-# Schema Standardization
+# Reproschema for schema standardization
 
-To see the documentation concerning the ReproNim schema specification [click]( ??? ).
+To see the documentation concerning the ReproNim schema specification [click here]( ??? ).
+
+This repository contains:
+
+-   the [Reproschema and its releases](./schemas)
+-   the [corresponding context files](./contexts)
+-   the [python libraries](./validation):
+    -   validator,
+    -   schema versioning/unversioning code,
+    -   protocol/activity/field/response template generator)
+-   the shacl validation files
+-   the [documentation](./docs)
 
 
+## Contributors
 
-## Serving the doc locally
 
-This project uses [MkDocs](https://www.mkdocs.org/) tool with [Material theme](https://squidfunk.github.io/mkdocs-material/) and extra plugins to generate the website.
+## Licences
 
-To test locally, you will need to install the Python dependencies. To do that, type the following commands:
+The content of this repository is distributed under the [Apache 2.0 licence]( ??? ).
 
-```
-git clone https://github.com/ReproNim/reproschema.git
-cd reproschema
-pip install -r requirements.txt
-```
-
-If you are working on your *fork*, simply replace `https://github.com/ReproNim/reproschema.git` by `git clone git@github.com:<username>/reproschema.git` where `<username>` is your GitHub username
-
-Once done, you need to run MkDocs. Simply type:
-
-```
-mkdocs serve
-```
-
-Finally, open up [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/) in your browser, and you
-should see the default home page of the being displayed.
+The corresponding documentation is available under the CC-BY 4.0 International license.
