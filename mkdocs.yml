@@ -8,7 +8,7 @@ theme:
   name: 'material'
   language: 'en'
   palette:
-    primary: 'light blue'
+    primary: 'dark blue'
     accent: 'light blue'
 
 # Pages
