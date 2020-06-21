@@ -26,6 +26,27 @@ This schema is defined by the [Activity schema](https://raw.githubusercontent.co
 included in a given study.
 This schema is defined by the [Protocol schema](https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Protocol).
 
+<img
+src="../img/reproschema.png"
+alt="reposchema"
+style="width: 800px; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+
+```
+├── activities
+│   └── templateActivity
+│       ├── items
+│       │   └── item-1_select
+│       ├── templateActivity_context
+│       └── templateActivity_schema
+├── protocols
+│   └── templateProtocol
+│       ├── README.md
+│       ├── templateProtocol_context
+│       └── templateProtocol_schema
+└── README.md
+```
+
 ## Protocol
 
 The protocol directory structure contains the following:
