@@ -15,19 +15,16 @@ On top of contain the text of the actual question, the schema at this level can 
 information such as the expected format of the item for the user interface: a boolean
 (if this is a yes/no question), a multiple choice (with a list of the response choices),
 a float or an integer (if a numerical value is expectd)...
+This schema is defined by the [Field schema](https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Field).
 
-This schema is defined by the [Field schema](https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Field)
-
-2.  The second level is the `activity` level that contains a set of items. This set would usually
+1.  The second level is the `activity` level that contains a set of items. This set would usually
 constitute one assessment or questionnaire: for example all the items of the Edinburgh handedness inventory would
 constitute one activity.
+This schema is defined by the [Activity schema](https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Activity).
 
-This schema is defined by the [Activity schema](https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Activity)
-
-3.  The highest level is the `protocol` level that originally define a set of activities to be
+1.  The highest level is the `protocol` level that originally define a set of activities to be
 included in a given study.
-
-This schema is defined by the [Protocol schema](https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Protocol)
+This schema is defined by the [Protocol schema](https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Protocol).
 
 ## Protocol
 
