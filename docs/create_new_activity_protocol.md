@@ -103,7 +103,7 @@ To create `item_x` in the items folder:
 -   `@type`=`"https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Field"`
 -   `responseOptions` – can be embedded or can point to a remote JSON-LD object.
 
-### To create a protocol
+### Create a protocol
 
 -   Under the [`protocols`](./protocols) directory, create directory with name of protocol in the CamelCase naming convention.
 -   protocol directory structure:
