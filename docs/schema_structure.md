@@ -26,6 +26,22 @@ This schema is defined by the [Activity schema](https://raw.githubusercontent.co
 included in a given study.
 This schema is defined by the [Protocol schema](https://raw.githubusercontent.com/ReproNim/reproschema/master/schemas/Protocol).
 
+
+<!-- If you check the schemas directory, you will see the others. Hierarchically, it's like this(lowest to highest):
+
+    Choices (this is only present for an item with choices, for example items of type radio, checkbox, select dropdown etc.)
+    ResponseOptions
+    Field
+    Activity
+    Protocol
+
+There are two others -- ScoringLogic and AddProperties, both of which could be present at the Protocol and/or Activity level.
+
+    ScoringLogic (as is very obvious from the name) is used to defined the scoring logic in any protocol and/or an assessment.
+    AddProperties is used to add extra properties for each node of a protocol or activity. -->
+
+
+
 <img
 src="../img/reproschema.png"
 alt="reposchema"
