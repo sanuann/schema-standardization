@@ -1,6 +1,6 @@
 # Testing your schema and collecting data
 
-First, make sure your syntax is in correct jsonld format. Test all files with `@content` from command line:
+First, make sure your syntax is in correct jsonld format. Test all files with `@context` from command line:
 
 ```
 npm install -g jsonlint
